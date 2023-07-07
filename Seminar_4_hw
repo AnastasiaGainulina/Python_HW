@@ -1,0 +1,33 @@
+# Создайте несколько переменных заканчивающихся и не оканчивающихся на «s».
+# Напишите функцию, которая при запуске заменяет содержимое переменных
+# оканчивающихся на s (кроме переменной из одной буквы s) на None.
+# Значения не удаляются, а помещаются в одноимённые переменные без s на конце.
+
+# datas = [42, -65, 84, 9, 2, -6]
+# s = 'ho ho ho'
+# names = 'one', 'two', 'boom', 'baam'
+# sssx = 12
+
+# print(datas)
+# print(s)
+# print(names)
+# print(sssx)
+
+def replace_s(test_words: dict):
+    let_to_change = [k for k in test_words if len(k) > 1 and k[-1] == 's']
+    for k in let_to_change:
+        test_words[k[:-1]] = test_words[k]
+        test_words[k] = None
+
+datas = [42, -65, 84, 9, 2, -6]
+s = 'ho ho ho'
+names = 'one', 'two', 'boom', 'baam'
+sssx = 12
+
+all_words = globals()
+print(f"{datas = }\n{s = }\n{names = }\n{sssx = }\n{all_words = }\n")
+
+replace_s(all_words)
+print(f"{datas = }\n{s = }\n{names = }\n{sssx = }\n")
+
+print(f"{data = }\n{s = }\n{name = }\n{sssx = }\n")
