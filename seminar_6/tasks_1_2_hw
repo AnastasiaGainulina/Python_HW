@@ -1,0 +1,8 @@
+from modul_seminar_6 import queens
+
+
+print(queens.queen_beaten([[1, 1], [5, 2], [8, 3], [6, 4], [3, 5], [7, 6], [2, 7], [4, 8]]))
+queens.successful_position(4)
+
+
+
